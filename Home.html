@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--The Character Set and viewport are given values  for better rendering on devices -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!--  The title of the page is set -->
+    <title>Guinness Global</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="./style-home.css">
+    <!-- Link to the external Boxicons stylesheet -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <!-- Twitter widget script is includede here as to start with when the page loads asynchronously -->
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+</head>
+
+<body>
+    <!-- Header section containing logo and navigation -->
+    <header>
+        <h1 class="logo"><img src="./Guiness123.png" alt="Logo"></h1>
+        <nav class="navigation">
+            <!-- Navigation links -->
+            <a href="./Home.html">Home</a>
+            <a href="./AboutUs.html">About</a>
+            <a href="Services.html">Services</a>
+            <a href="./ContactUs.html">Contact</a>
+            <a href="./calculate-rate.html">Rates</a>
+            <!-- Login button -->
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
+
+    <!-- Introduction section -->
+    <section class="intro-section">
+        <h2>Welcome to Our Consultancy</h2>
+        <p>Empowering businesses through expert consultation and innovative solutions.</p>
+    </section>
+
+    <!-- Image slider with company pictures -->
+    <div class="slide-container">
+        <!-- Slides with images -->
+        <div class="slide fade">
+            <img src='./Home Images/home-image.jpg' alt='Home image guy discussing issues'>
+        </div>
+        <div class="slide fade">
+            <img src='./Home Images/home-image1.jpg' alt='Smiling People '>
+        </div>
+        <div class="slide fade">
+            <img src='./Home Images/home-image2.jpg' alt='Person working on laptop'>
+        </div>
+        <div class="slide fade">
+            <img src='./Home Images/home-image3.jpg' alt='People discussing and one person working'>
+        </div>
+        <!-- Previous and Next buttons for navigation -->
+        <a href="#" class="prev" title="Previous">&#10094</a>
+        <a href="#" class="next" title="Next">&#10095</a>
+    </div>
+
+    <!-- Dots for slide navigation where a user can click and change images accordingly-->
+    <div class="dots-container">
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+        <span class="dot"></span>
+    </div>
+
+    <!-- Recent Works section -->
+    <article class="recent-works">
+        <h1 style="font-size: 30px;">Recent Works</h1>
+        <!-- Individual work items where three articles are included -->
+            <article class="project-work">
+                <h2>Elegance Boutique</h2>
+                <p>Successfully crafted and launched a visually stunning and user-friendly e-commerce website for Elegance Boutique, enhancing their online presence and driving increased sales.</p>
+            </article>
+            <article class="project-work">
+                <h2>Tech Innovate Solutions</h2>
+                <p>Executed a seamless migration of Tech Innovate Solutions' infrastructure to the cloud, optimizing resource utilization, enhancing security, and ensuring scalability for future growth.</p>
+            </article>
+            <article class="project-work">
+                <h2>Global Travel Adventures</h2>
+                <p>Implemented a targeted digital marketing campaign for Global Travel Adventures, leveraging social media, SEO strategies, and email marketing to boost brand visibility and attract a broader audience.</p>
+            </article>
+        </article>
+    <!-- User Testimonials section -->
+    <h2 class="testimonial-heading">User Testimonials</h2>
+    <!-- Testimonial cards representing three satisfied customers-->
+    <div class="testimonial-card">
+        <img src="./Home Images/home-image5.jpg" alt="John Doe's Image">
+        <h3>John Doe</h3>
+        <p>I had a fantastic experience working with this web consultancy. They not only delivered a stunning website but also provided valuable insights and suggestions to enhance its functionality. Their team is professional, efficient, and truly understands the needs of their clients. I highly recommend their services!</p>
+    </div>
+    <div class="testimonial-card">
+        <img src="./Home Images/home-image4.jpg" alt="Emily Smith's Image">
+        <h3>Emily Smith</h3>
+        <p>Choosing this web consultancy was one of the best decisions for my business. They transformed my outdated website into a modern, user-friendly platform. The team was responsive, creative, and committed to delivering high-quality results. I appreciate their attention to detail and dedication to client satisfaction.</p>
+    </div>
+    <div class="testimonial-card">
+        <img src="./Home Images/home-image6.jpg" alt="Alex Rodrigeus's Image">
+        <h3>Alex Rodriguez</h3>
+        <p>Working with this web consultancy exceeded my expectations. From the initial consultation to the final launch, the process was smooth and collaborative. They have a talented team of experts who not only focus on aesthetics but also on creating a seamless user experience. I'm impressed with the results and the ongoing support they provide.</p>
+    </div>
+
+    <!-- Call to Action section section for attracting users to use the services -->
+    <div class="cta-section">
+        <section>
+            <h3>Ready to Transform Your Business?</h3>
+            <p>Explore our services or contact us for personalized consultation.</p>
+            <a href="Services.html" class="cta-btn">Explore Services</a>
+        </section>
+    </div>
+
+    <!-- Aside section for social media feed particulary Twitter posts and stories-->
+    <aside class="aside-api">
+        <h2>Stay Connected With Us</h2>
+        <!-- Twitter feed -->
+        <a class="twitter-timeline" data-theme="dark" href="https://twitter.com/Guinness416912">
+            Tweets by Sachin
+        </a>
+    </aside>
+
+    <!-- Footer section -->
+    <div class="footer">
+        <p>&copy; 2023 Guinness Global. All rights reserved.</p>
+    </div>
+</body>
+
+<!-- Included the external JavaScript file -->
+<script src="./home.js"></script>
+
+</html>

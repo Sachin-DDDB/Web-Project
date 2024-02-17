@@ -1,0 +1,359 @@
+/* Imported the Poppins font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* Reset default styles and set Poppins as the default font */
+* {
+    border: 0;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+}
+
+/* Style for the body, set height to 100% */
+body {
+    height: 100%;
+}
+
+/* CSS for the header */
+header {
+    top: 0;
+    left: 0;
+    width: auto;
+    height: 55px;
+    padding: 10px 10px 10px 10px;
+    background: #666769;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Style for the logo */
+.logo img {
+    width: 200px;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+}
+
+/* CSS for navigation links */
+.navigation a {
+    position: relative;
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+    font-weight: 500;
+    margin-left: 10px;
+}
+
+/* Style for the navigation link underline */
+.navigation a::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: white;
+    border-radius: 5px;
+    bottom: -6px;
+    transform: scaleX(0);
+}
+
+/* Highlight the navigation link underline on hover */
+.navigation a:hover::after {
+    transform: scaleX(1);
+}
+
+/* Style for the login button */
+.navigation .btnLogin-popup {
+    width: 100px;
+    height: 50px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    margin: 5px;
+    background: transparent;
+    border: 2px solid white;
+    outline: none;
+    border-radius: 10px;
+    font-size: 1.5em;
+    color: white;
+    font-weight: 500;
+}
+
+/* Highlight the login button on hover */
+.navigation .btnLogin-popup:hover {
+    background-color: white;
+    color: red;
+}
+
+/* Media query for screens with a maximum width of 700px */
+@media only screen and (max-width: 700px) {
+    header {
+        flex-direction: column;
+        height: auto;
+    }
+    .navigation {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .navigation a {
+        margin-left: 0;
+        margin-bottom: 10px;
+        float: none;
+        display: block;
+    }
+}
+
+/* CSS for the Intro Section */
+.intro-section {
+    text-align: center;
+    padding: 5px 5px 5px 5px;
+    color: #252422;
+    background-color: #cdcbcb;
+    width: 100%;
+}
+/* Introduction section heading and paragrapgh CSS */
+.intro-section h2 {
+    font-size: 50px;
+    font-weight: 400;
+}
+.intro-section p {
+    font-size: 20px;
+    font-weight: 400;
+}
+/* CSS for the image slider on home page */
+.slide-container .prev,
+.slide-container .next {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: green;
+    font-weight: bold;
+    font-size: 20px;
+    transition: all 0.6s ease;
+    border-radius: 0 3px 3px 0;
+    user-select: none;
+}
+
+/* Highlight the slider navigation buttons on hover */
+.slide-container .prev:hover,
+.slide-container .next:hover {
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+}
+
+/* Position the previous button on the left */
+.slide-container .prev {
+    left: 2px;
+}
+
+/* Position the next button on the right */
+.slide-container .next {
+    right: 2px;
+}
+
+/* Style for the dots container */
+.dots-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+/* Style for individual dot in the slider */
+.dots-container .dot {
+    cursor: pointer;
+    margin: 5px;
+    width: 20px;
+    height: 20px;
+    color: #080303;
+    border-radius: 50%;
+    background-color: #5a7c80;
+}
+
+/* Highlight the active dot in the slider */
+.dots-container .dot.active {
+    border: 2px solid black;
+}
+
+/* CSS for the slide container */
+.slide-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 60%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+    position: relative;
+    background-color: #ced4da;
+}
+
+/* Style for individual slides in the slider */
+.slide-container .slide {
+    display: none;
+    width: 100%;
+}
+
+/* Animation for fading between slides */
+.slide-container .slide.fade {
+    animation: fade 0.5s cubic-bezier(0.55, 0.085, 0.68, 0.53) both;
+}
+
+/* Set the width of images in slides to 100% */
+.slide-container .slide img {
+    width: 100%;
+}
+
+
+
+/* CSS for the Call to action section */
+.cta-section {
+    background-color: #dee2e6;
+    margin: 10px 10px 10px 10px;
+    text-align: center;
+    font-size: 30px;
+    padding: 10px 10px 10px 10px;
+}
+
+.cta-section h3 {
+    font-weight: 400;
+}
+
+.cta-section a {
+    text-decoration: none;
+    color: blue;
+    font-size: 20px;
+}
+
+/* Highlight the CTA link on hover */
+.cta-section a:hover {
+    background-color: white;
+}
+
+.cta-section .cta-btn {
+    text-align: center;
+    border: 1px groove gray;
+    border-radius: 5px;
+    background-color: #dee2e6;
+    padding: 2px 2px 2px 2px;
+    text-decoration: none;
+}
+/* CSS for the Recent work article */
+.recent-works {
+    text-align: center;
+    margin: 0;
+    padding: 5px;
+    background-color: #dee2e6;
+}
+
+.recent-works > h1,
+.project-work {
+    margin: 10px;
+    font-size: 20px;
+    padding: 5px;
+}
+
+/* Style for individual work items in Recent Works */
+.project-work {
+    background: white;
+    text-align: left;
+}
+
+.project-work > h2,
+p {
+    margin: 4px;
+    font-size: 90%;
+}
+/* CSS for the Testimonial */
+.testimonial-heading {
+    width: 100%;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 15px;
+    margin-top: 15px;
+}
+
+/* Style for individual testimonial cards */
+.testimonial-card {
+    float: left;
+    width: 33.3%;
+    margin-bottom: 15px;
+    padding: 10px 10px 10px 10px;
+    text-align: center;
+}
+
+/* Style for testimonial card images */
+.testimonial-card img {
+    width: 70%;
+    height: 80%;
+    border: 2px solid black;
+    padding: 2px;
+}
+.testimonial-card img:hover {
+    opacity: 0.7;
+}
+
+/* Style for testimonial card headings */
+.testimonial-card h3 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+/* Style for testimonial card paragraphs */
+.testimonial-card p {
+    padding: 5px 5px 5px 5px;
+}
+/* CSS to make the Testimonial Section responsive */
+@media only screen and (max-width:700px){
+    .testimonial-card {
+        float: none;
+        display: block;
+        width: 100%;
+    }
+}
+/* CSS for the aside API of twitter */
+.aside-api {
+    box-sizing: border-box;
+    padding: 20px;
+    width: 800px;
+    margin: 0 auto;
+
+}
+
+.aside-api h2 {
+    text-align: center;
+    padding: 5px;
+    font-size: 30px;
+    font-weight: 400;
+    margin-bottom: 25px;
+}
+/* CSS to make the Twitter Api responsive */
+@media only screen and (max-width:700px) {
+    .aside-api {
+        float: none;
+        display: block;
+        width: 100%;
+    }
+}
+
+/* CSS for the footer */
+.footer {
+    position: relative;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #666769;
+    color: white;
+    text-align: center;
+
+    /* Media query for screens with a maximum width of 700px */
+    @media only screen and (max-width: 700px) {
+        position: static;
+    }
+}

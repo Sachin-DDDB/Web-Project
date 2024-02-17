@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- The Character Set and viewport are given values for better rendering on devices -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guinness Global</title>
+    <!-- Linking the external stylesheet and Boxicons library -->
+    <link rel="stylesheet" href="style-login.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Header section containing the logo and navigation -->
+    <header>
+        <h1 class="logo"><img src="./Guiness123.png" alt="Logo"></h1>
+        <nav class="navigation">
+            <a href="./Home.html">Home</a>
+            <a href="./AboutUs.html">About</a>
+            <a href="Services.html">Services</a>
+            <a href="./ContactUs.html">Contact</a>
+            <a href="./calculate-rate.html">Rates</a>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
+
+    <!-- Wrapper which contains the login form and other details -->
+    <div class="wrapper">
+        <!-- Login Form -->
+        <form action="">
+            <h1>Login</h1>
+            <!-- Box for username input -->
+            <div class="input-box">
+                <input type="text" placeholder="Username" required>
+                <i class='bx bxs-user'></i>
+            </div>
+            <!-- Box for password input -->
+            <div class="input-box">
+                <input type="password" id="psw" placeholder="Password" required>
+                <i class='bx bxs-lock-alt'></i>
+            </div>
+            <!-- Box for forgot password -->
+            <div class="remember-forgot">
+                <label><input type="checkbox"> Remember me</label>
+                <a href="#">Forgot Password?</a>
+            </div>
+            <button type="submit" class="btn" onclick="checkPasswordStrength">Login</button>
+            <div class="register-link">
+                <p>Don't have an account? <a href="#">Register</a></p>
+            </div>
+        </form>
+    </div>
+    <div class="footer">
+        <p>&copy; 2023 Guinness Global. All rights reserved.</p>
+    </div>
+    <script>
+        document.querySelector('.btnLogin-popup').addEventListener('click', function() {
+            window.location.href = "./login.html";
+        });
+
+        // JavaScript to check the password strength
+        function checkPasswordStrength() {
+            var myInput = document.getElementById("psw");
+            var lowerCaseLetters = /[a-z]/g;
+            var upperCaseLetters = /[A-Z]/g;
+            var numbers = /[0-9]/g;
+            var length = myInput.value.length >= 8;
+
+            var strengthText = "";
+
+            if (!myInput.value.match(lowerCaseLetters)) {
+                strengthText += "Include at least one lowercase letter.\n";
+            }
+            if (!myInput.value.match(upperCaseLetters)) {
+                strengthText += "Include at least one uppercase letter.\n";
+            }
+            if (!myInput.value.match(numbers)) {
+                strengthText += "Include at least one number.\n";
+            }
+            if (!length) {
+                strengthText += "Minimum 8 characters.\n";
+            }
+
+            if (strengthText.trim() !== "") {
+                window.alert("Password does not meet the following criteria:\n\n" + strengthText.trim());
+            }
+        }
+    </script>
+
+</body>
+
+</html>

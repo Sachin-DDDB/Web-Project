@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!--The Character Set and viewport are given values  for better rendering on devices -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <!--  The title of the page is set -->
+    <title>Guinness Global</title>
+    <!-- Link to the external stylesheet -->
+    <link rel="stylesheet" href="./style-service.css">
+    <!-- Link to the Boxicons library for icon fonts -->
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Header section with logo and navigation -->
+    <header>
+        <h1 class="logo"><img src="./Guiness123.png" alt="Logo"></h1>
+        <nav class="navigation">
+            <a href="./Home.html">Home</a>
+            <a href="./AboutUs.html">About</a>
+            <a href="./Services.html">Services</a>
+            <a href="./ContactUs.html">Contact</a>
+            <a href="./calculate-rate.html">Rates</a>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
+
+    <!-- Heading for the Services section -->
+    <h2 class="heading">Our Services</h2>
+
+    <!-- Container for service cards -->
+    <div class="service-container">
+        <!-- Service Card 1 -->
+        <div class="card">
+            <img src="./Service Images/service-image1.jpg" alt="Website Development Service">
+            <div class="card-content">
+                <h3>Website Development</h3>
+                <p>Elevate your online presence with our bespoke website development services. From eye-catching designs to seamless functionality, we bring your vision to life.</p>
+                <a href="#" id="readMoreBtn" class="btn">Read More</a>
+            </div>
+        </div>
+        <!-- Service Card 2 -->
+        <div class="card">
+            <img src="./Service Images/service-image2.jpg" alt="Cloud Services">
+            <div class="card-content">
+                <h3>Cloud Services</h3>
+                <p>Embrace the power of the cloud! Our services ensure secure data storage, scalable solutions, and optimal performance for your business applications</p>
+                <a href="https://www.geeksforgeeks.org/cloud-based-services/" class="btn">Read More</a>
+            </div>
+        </div>
+        <!-- Service Card 3 -->
+        <div class="card">
+            <img src="./Service Images/service-image3.jpg" alt="Consulting and Strategy">
+            <div class="card-content">
+                <h3>Consulting and Strategy</h3>
+                <p>Navigate the digital landscape with confidence. Our consultancy and strategic planning services provide tailored solutions to propel your business forward.</p>
+                <a href="https://blog.hubspot.com/sales/strategy-consulting" class="btn">Read More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Container for additional service cards -->
+    <div class="card1-container">
+        <!-- Service Card 4 -->
+        <div class="card1">
+            <img src="./Service Images/service-image4.jpg" alt="Graphic Design">
+            <div class="card-content">
+                <h3>Graphic Design</h3>
+                <p>Make a lasting impression with captivating visuals. Our graphic design services blend creativity with strategy to convey your brand story effectively.</p>
+                <a href="https://webflow.com/blog/what-is-graphic-design" class="btn">Read More</a>
+            </div>
+        </div>
+        <!-- Service Card 5 -->
+        <div class="card1">
+            <img src="./Service Images/service-image5.jpg" alt="Digital Marketing">
+            <div class="card-content">
+                <h3>Digital Marketing</h3>
+                <p>Amplify your brand's reach! Our digital marketing services encompass SEO, social media management, and content strategies to enhance your online presence.</p>
+                <a href="https://www.forbes.com/advisor/business/what-is-digital-marketing/" class="btn">Read More</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- Section for Consultancy Rates -->
+    <div class="consultancy-rates">
+        <h2>Consultancy Rates</h2>
+        <p>
+            Our consultancy services are priced competitively based on industry standards.
+            For detailed information about our hourly rates and to get a customized quote,
+            click the button below.
+        </p>
+        <button id="rate-calculate" class="rate-button">Click Here</button>
+    </div>
+
+    <!-- Footer section -->
+    <div class="footer">
+        <p>&copy; 2023 Guinness Global. All rights reserved.</p>
+    </div>
+
+    <!-- JavaScript script for handling button clicks -->
+    <script>
+        // To get the read more button and send the user to external links
+        var readMoreBtn = document.getElementById('readMoreBtn');
+        readMoreBtn.addEventListener('click', function () {
+           
+            window.location.href = 'https://www.w3schools.com/whatis/'; 
+        });
+
+        // To get the "Calculate Rate" button and add a click event listener
+        var rate_calculate = document.getElementById('rate-calculate');
+        rate_calculate.addEventListener('click', function () {
+            window.location.href = './calculate-rate.html'; 
+        });
+
+  
+        document.querySelector('.btnLogin-popup').addEventListener('click', function () {
+            window.location.href = "./login.html"; 
+        });
+    </script>
+</body>
+
+</html>

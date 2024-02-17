@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+    <head>
+    <!--The Character Set and viewport are given values  for better rendering on devices -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+           <!--  The title of the page is set -->
+        <title>Guinness Global</title>
+        <!-- Linking the external stylesheet for contact page -->
+        <link rel="stylesheet" href="style-contact.css"> 
+        <!-- Linking the external Boxicons stylesheet -->
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+    <!-- Header section containing logo and navigation -->
+          <header>
+            <!-- Logo and navigation bar -->
+            <h1 class="logo"><img src="./Guiness123.png" alt="Logo"></h1>
+            <nav class="navigation">
+                <a href="./Home.html">Home</a>
+                <a href="./AboutUs.html">About</a>
+                <a href="Services.html">Services</a>
+                <a href="./ContactUs.html">Contact</a>
+                <a href="./calculate-rate.html">Rates</a>
+                <button class="btnLogin-popup" >Login</button>
+            </nav>
+        </header>
+        <!-- Main content container -->
+        <div class="container">
+            <h1>Contact Us</h1>
+            <p>We would love to respond to your queries and help you succeed. Feel free to get in touch with us</p>
+            <!-- Contact box containing left and right sections -->
+            <div class="contact-box">
+                <!-- Left section for sending requests -->
+                <div class="contact-left">
+                    <h3>Send your request</h3>
+                    <!-- Form for user input -->
+                    <form>
+                        <!-- Input rows for name and phone -->
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label>Name</label>
+                                <input type="text" placeholder=" John" >
+                            </div>
+                            <div class="input-group">
+                                <label>Phone</label>
+                                <input type="text" placeholder=" +353 89 268 2276" >
+                            </div>
+                        </div>
+                        <!-- Input rows for email and subject -->
+                        <div class="input-row">
+                            <div class="input-group">
+                                <label>Email</label>
+                                <input type="email" placeholder=" John@gmail.com" >
+                            </div>
+                            <div class="input-group">
+                                <label for="subject-dropdown">Subject</label>
+                                <!-- Dropdown for selecting the subject -->
+                                <select class="drop" id="subject-dropdown">
+                                    <option value="product-specs">Product Specifications</option>
+                                    <option value="general-inquiry">General Inquiry</option>
+                                    <option value="tech-support">Technical Support</option>
+                                    <option value="partnership">Partnership Opportunities</option>
+                                    <option value="feedback">Feedback and Suggestions</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- Textarea for message input -->
+                        <label>Message</label>
+                        <textarea rows="5" placeholder=" Your Message"></textarea>
+                        <!-- Submit button -->
+                        <button type="submit" class="submit1">Submit</button>
+                    </form>
+                </div>
+                <!-- Right section for contact information -->
+                <div class="contact-right">
+                    <h3>Reach Us</h3>
+                    <!-- Table for displaying contact information -->
+                    <table>
+                        <tr>
+                            <td>Email</td>
+                            <td>contactguinness@example.com</td>
+                        </tr>
+                        <tr>
+                            <td>Phone</td>
+                            <td>+353 89 268 2276</td>
+                        </tr>
+                        <tr>
+                            <td>Address</td>
+                            <td>#212 North Main Street,<br>
+                                Cork, Ireland</td>
+                        </tr>
+                    </table>
+                    <!-- Map section using Google Maps iframe -->
+                    <div class="map">
+                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d78786.60886847039!2d-8.545449911834492!3d51.895976278284586!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x4844900891beb961%3A0xa00c7a99731c5d0!2sCork!5e0!3m2!1sen!2sie!4v1700051203592!5m2!1sen!2sie" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     </div>
+                </div>
+            </div>
+        </div>
+        <!-- Footer section -->
+        <div class="footer">
+            <p>&copy; 2023 Guinness Gloabl. All rights reserved.</p>
+        </div>
+        <!-- JavaScript for handling login button click -->
+        <script>
+            document.querySelector('.btnLogin-popup').addEventListener('click',function() {
+                window.location.href = "./login.html" ;
+            });
+    
+        </script>
+    </body>
+</html>

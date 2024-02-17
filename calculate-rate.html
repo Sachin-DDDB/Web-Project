@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <!-- The Character Set and viewport are given values for better rendering on devices -->
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guinness Global</title>
+    <!-- Linking the external stylesheet and Boxicons library -->
+    <link rel="stylesheet" href="style-calculate.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+</head>
+
+<body>
+    <!-- Header section containing the logo and navigation -->
+    <header>
+        <h1 class="logo"><img src="./Guiness123.png" alt="Logo"></h1>
+        <nav class="navigation">
+            <a href="./Home.html">Home</a>
+            <a href="./AboutUs.html">About</a>
+            <a href="Services.html">Services</a>
+            <a href="./ContactUs.html">Contact</a>
+            <a href="./calculate-rate.html">Rates</a>
+            <button class="btnLogin-popup">Login</button>
+        </nav>
+    </header>
+
+    <!-- Main heading for the Rate Calculator page -->
+    <h1 class="heading">Rate Calculator</h1>
+
+    <!-- Form for entering rate-related information -->
+    <div class="quote-rate">
+        <form id="quoteForm">
+            <!-- Dropdown for selecting hourly rate -->
+            <label for="hourlyRate">Services:</label>
+            <select id="hourlyRate" onchange="myfunciton()">
+                <option value="10">Website Development</option>
+                <option value="20">Digital Marketing</option>
+                <option value="30">Consulting & Strategy</option>
+                <option value="40">Cloud Services</option>
+                <option value="50">Graphic Design</option>
+            </select>
+            <br>
+
+            <!-- Slider for selecting the number of hours -->
+            <label for="numberOfHours">Number of Hours:</label>
+            <input type="range" id="numberOfHours" min="1" max="20" value="1" step="1" oninput="updateSliderValue()">
+            <span id="sliderValue">1 hour</span>
+
+            <br>
+
+            <!-- Dropdown for selecting the currency which has 10 foreign currencies -->
+            <label for="selectedCurrency">Currency:</label>
+            <select id="selectedCurrency">
+                <option value="EUR">Euro</option>
+                <option value="USD">United States Dollar</option>
+                <option value="GBP">British Pound Sterling</option>
+                <option value="CNY">Chinese Yuan</option>
+                <option value="INR">Indian Rupee</option>
+                <option value="MYR">Malaysian Ringgit</option>
+                <option value="YER">Yemeni Rial</option>
+                <option vakue="KES">Kenyan Shilling</option>
+                <option value="GEL">Georgian Lari</option>
+                <option value="LRD">Liberian Dollar</option>
+            </select>
+
+            <!-- Button to trigger the quote calculation -->
+            <button class="btn" type="button" onclick="calculateQuote()">Calculate Quote</button>
+        </form>
+    </div>
+    <!-- Table showcasing the services and their rates per hour -->
+    <table>
+        <tr>
+            <th>Services</th>
+
+            <th>Rate Per Hour</th>
+        </tr>
+        <tr>
+            <td>Website Development</td>
+            <td>€10</td>
+        </tr>
+        <tr>
+            <td>Digital Marketing</td>
+            <td>€20</td>
+        </tr>
+        <tr>
+            <td>Consulting & Strategy</td>
+            <td>€30</td>
+        </tr>
+        <tr>
+            <td>Cloud Services</td>
+            <td>€40</td>
+        </tr>
+        <tr>
+            <td>Graphic Design</td>
+            <td>€50</td>
+        </tr>
+    </table>
+    <!-- Displaying the result of the quote calculation -->
+    <div id="result">
+        <p>Your Quote: <span id="quoteAmount"></span></p>
+    </div>
+    <div class="pay">
+        <button type="button" onclick="redirectToLoginPage()">Pay Now</button>
+    </div>
+    <!-- Footer section with copyright information -->
+    <div class="footer">
+        <p>&copy; 2023 Guinness Global. All rights reserved.</p>
+    </div>
+
+    <!-- Script tag to include the JavaScript file -->
+    <script src="./calculate.js"></script>
+
+    <!-- Event listener for the login button -->
+    <script>
+        document.querySelector('.btnLogin-popup').addEventListener('click', function() {
+            window.location.href = "./login.html";
+        });
+    </script>
+</body>
+
+</html>

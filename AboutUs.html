@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- Meta tags for character set and viewport -->
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- Title and external stylesheet link -->
+        <title>Guinness Global</title>
+        <link rel="stylesheet" href="style-aboutUs.css"> 
+        <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    </head>
+    <body>
+        <!-- Header section with logo and navigation -->
+        <header>
+            <h1 class="logo"><img src="./Guiness123.png" alt="Logo"></h1>
+            <nav class="navigation">
+                <a href="./Home.html">Home</a>
+                <a href="./AboutUs.html">About</a>
+                <a href="./Services.html">Services</a>
+                <a href="./ContactUs.html">Contact</a>
+                <a href="./calculate-rate.html">Rates</a>
+                <button class="btnLogin-popup" >Login</button>
+            </nav>
+        </header>
+
+        <!-- About Us Section -->
+        <div class="about-section">
+          <h2>About Us</h2>
+          <p>Welcome to Guinness Global, where innovation meets excellence. We are a dynamic team of passionate professionals dedicated to providing cutting-edge solutions in the digital landscape. With a rich history of successful projects and a commitment to staying ahead in the fast-evolving world of technology, we pride ourselves on delivering exceptional services to our clients.</p>
+      </div>
+
+        <!-- History Section which has story and community-->
+        <div class="container">
+            <div class="main-content">
+                <!-- First Article - Our Story -->
+                <article id="secone" class="content">
+                    <h2>Our Story</h2>
+                    <img src="./About Us Images/about-image1.jpg" alt="Originated from Ireland">
+                    <p>Founded in the vibrant landscapes of Ireland, our consultancy company embarked on a journey driven by a vision to revolutionize the digital space. From humble beginnings to becoming a trusted name in the industry, our story is a testament to dedication, innovation, and unwavering commitment to our clients.</p>
+                  </article>
+                <!-- Second Article - Community Engagement -->
+                <article id="sectwo" class="content">
+                    <h2>Community Engagement</h2>
+                    <img src="./About Us Images/about-image2.jpg" alt="Community Strenth Image">
+                    <p>At the heart of our mission is community engagement. We believe in contributing to the well-being and growth of the communities we operate in. Through various initiatives and partnerships, we strive to make a positive impact on society, fostering collaboration and shared success. </p>
+                  </article>
+            </div>
+
+            <!-- Aside Section with Our Partners -->
+            <aside>
+                <h2>Our Partners</h2>
+                <ul>
+                    <li><img src="./About Us Images/about-image3.jpg" alt="First Business Partner"> Evelyn Sterling </li>
+                    <li><img src="./About Us Images/about-image4.jpg" alt="Second Business Partner"> Sophia Winslow </li>
+                    <li><img src="./About Us Images/about-image5.jpg" alt="Third Partner"> Maxwell Granger </li>
+                </ul>
+            </aside>
+        </div>
+
+        <!-- Mission Section -->
+        <div class="wrapper">
+            <article class="mission">
+              <p>At Guinness Global, our mission is to provide innovative and effective online solutions that empower organizations globally. We are dedicated to promoting digital success through strategic consultancy, cutting-edge design, and seamless development. Our goal is to deliver unmatched value, build enduring relationships, and transform our clients' dreams into successful online businesses.</p>
+            </article>
+            <img class="image" id="small-image" src="./About Us Images/about-image6.jpg" alt="Mission Image">
+        </div>
+
+        <!-- Our Team Section -->
+        <h2 class="team">Our Team</h2>
+        <div class="row">
+            <!-- Team Member 1 -->
+            <div class="team-member">
+                <div class="card">
+                    <img src="./About Us Images/about-image7.jpg" alt="Jane" style="width:100%">
+                    <div class="container1">
+                        <h2 style="font-size: 30px;">Olivia Davis</h2>
+                        <p class="title">CEO & Founder</p>
+                        <p>Olivia is the visionary leader behind our consultancy. With a passion for innovation and strategic thinking, she guides the team towards success. Her entrepreneurial spirit and commitment to excellence drive our company's growth.</p>
+                        <p style="text-align: center;">olivia@example.com</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 2 -->
+            <div class="team-member">
+                <div class="card">
+                    <img src="./About Us Images/about-image8.jpg" alt="Mike" style="width:100%">
+                    <div class="container1">
+                        <h2>Ethan Martinez</h2>
+                        <p class="title">Cloud Architect</p>
+                        <p>As our cloud architect, Ethan is the technical maestro behind the scenes. His expertise in cloud services ensures that our clients' digital infrastructure is secure, scalable, and optimized. Ethan's problem-solving skills and dedication elevate our technical capabilities.</p>
+                        <p style="text-align: center;">ethan@example.com</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Team Member 3 -->
+            <div class="team-member">
+                <div class="card">
+                    <img src="./About Us Images/about-image9.jpg" alt="John" style="width:100%">
+                    <div class="container1">
+                        <h2>Michael Brown</h2>
+                        <p class="title">Designer</p>
+                        <p>Michael is the creative force shaping our digital experiences. As a designer, she combines aesthetic flair with user-centric design principles, crafting visually appealing and intuitive solutions. Sophia's artistic touch enhances our projects and captivates our clients.</p>
+                        <p style="text-align: center;">michael@example.com</p>
+                        <p><button class="button">Contact</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer Section -->
+        <div class="footer">
+            <p>&copy; 2023 Guinness Global. All rights reserved.</p>
+        </div>
+
+        <!-- JavaScript for navigation -->
+        <script>
+            document.querySelector('.btnLogin-popup').addEventListener('click', function() {
+                window.location.href = "./login.html";
+            });
+           // JavaScript to select all elements with the class "button" and send the user to Contact Us page
+                var buttons = document.querySelectorAll('.button');
+
+            // Loop through each button and attach the event listener to make it work
+            buttons.forEach(function(button) {
+                           button.addEventListener('click', function() {
+                     window.location.href = "./ContactUs.html";
+                  });
+                        });
+            
+        </script>
+    </body>
+</html>

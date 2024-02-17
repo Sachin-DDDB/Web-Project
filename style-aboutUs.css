@@ -1,0 +1,360 @@
+/* Import the Poppins font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* CSS for the whole page to start with */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #d3d3d3;
+}
+
+/* CSS for the header */
+header {
+  top: 0;
+  left: 0;
+  width: auto;
+  height: 55px;
+  padding: 10px 10px 10px 10px;
+  background: #666769;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* CSS for the logo inside the header */
+.logo img {
+  width: 200px;
+  height: auto;
+  display: block;
+  margin-top: 10px;
+}
+
+/* CSS for navigation bar */
+.navigation a {
+  position: relative;
+  font-size: 1.5em;
+  color: white;
+  text-decoration: none;
+  font-weight: 500;
+  margin-left: 10px;
+}
+
+/* Style for the navigation link underline */
+.navigation a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 3px;
+  background: white;
+  border-radius: 5px;
+  bottom: -6px;
+  transform: scaleX(0);
+}
+
+/* Highlight the navigation link underline on hover */
+.navigation a:hover::after {
+  transform: scaleX(1);
+}
+
+/* Style for the login button */
+.navigation .btnLogin-popup {
+  width: 100px;
+  height: 50px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  margin: 5px;
+  background: transparent;
+  border: 2px solid white;
+  outline: none;
+  border-radius: 10px;
+  font-size: 1.5em;
+  color: white;
+  font-weight: 500;
+}
+
+/* Highlight the login button on hover */
+.navigation .btnLogin-popup:hover {
+  background-color: white;
+  color: red;
+}
+
+/* Media query for screens with a maximum width of 700px */
+@media only screen and (max-width: 700px) {
+  header {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .navigation a {
+    margin-left: 0;
+    margin-bottom: 10px;
+    float: none;
+    display: block;
+  }
+}
+/* CSS for the about Us section div */
+.about-section {
+  padding: 20px;
+  text-align: center;
+  background-color: #d3d0d0;
+  color: black;
+  width: 100%;
+}
+
+.about-section h2 {
+  font-weight: 500;
+  font-size: 40px;
+  padding: 10px;
+}
+
+.about-section p {
+  font-size: 20px;
+  font-weight: 500;
+  padding: 2px;
+}
+
+/* CSS for the class container which has two articles and an aside */
+.container {
+  width: 100%;
+  display: flex;
+  text-align: center;
+  padding: 10px 10px;
+}
+
+.container:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.container::after,
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/* CSS for the h2 inside container */
+.container h2 {
+  text-align: center;
+  font-size: 35px;
+  font-weight: 500;
+  padding: 5px 5px 5px 5px;
+  margin: 5px 0px 15px 0px;
+}
+
+.container p {
+  width: 99%;
+}
+/* CSS to make the container containing articles responsive */
+@media only screen and (max-width: 700px) {
+  .container {
+      flex-direction: column;
+  }
+  aside {
+ float: none;
+      width: auto;
+  }
+}
+
+.main-content {
+  flex: 70%;
+  border: 5px solid #dcdbdb;
+  float: left;
+  align-items: baseline;
+}
+
+.content {
+  float: left;
+  justify-content: space-between;
+  width: 50%;
+  padding: 5px 5px;
+  box-sizing: border-box;
+}
+
+.main-content img {
+  width: 50%;
+  height: auto;
+  padding: 1px;
+  border: 2px solid rgb(207, 206, 206);
+  margin: auto;
+}
+
+/* CSS for the container where the history and partners are described */
+#secone {
+  width: auto;
+}
+#secone h2{
+  margin-top: 50px;
+  margin-bottom: 50px;  
+}
+#secone img {
+  float: left;
+}
+
+#sectwo {
+  width: auto;
+}
+
+#sectwo img {
+  float: left;
+}
+#sectwo h2{
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+article {
+  flex: 1; 
+  margin: 10px 10px 10px 10px; 
+}
+
+.image {
+  margin: 20px 20px 20px 20px;
+  padding: 10px 10px 10px 10px;
+  max-width: 50%; 
+}
+
+aside {
+  float: right;
+  flex: 30%;
+  padding: 5px 5px;
+  box-sizing: border-box;
+  width: 30%;
+  border: 5px solid #d0cfcf;
+}
+
+ul li {
+  list-style-type: none;
+  text-align: center;
+}
+
+aside li img {
+  width: 100%;
+  height: auto;
+  padding: 1px;
+  border: 2px solid gray;
+  margin-bottom: 5px;
+  margin-top: 10px;
+}
+
+/* CSS for the wrapper div which has one article and one image related to mission */
+.wrapper {
+  display: flex;
+  justify-content: space-between; 
+  align-items: center; 
+  width: 100%;
+}
+
+.wrapper img {
+  border: 2px solid black;
+}
+
+.wrapper p {
+  text-align: center;
+  font-size: 25px;
+}
+
+.mission h2 {
+  text-align: center;
+  font-size: 50px;
+}
+
+/* CSS for the heading of our Team */
+.team {
+  width: 100%;
+  text-align: center;
+  font-size: 35px;
+  font-weight: 500;
+}
+
+/* CSS for the row Div */
+.row {
+  width: 100%;
+ 
+}
+
+/* CSS for the column */
+.team-member {
+  float: left;
+  width: 33.3%;
+  margin-bottom: 15px;
+  padding: 10px 10px 10px 10px;
+}
+
+/* CSS for the Card */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  margin: 8px;
+  padding: 5px 5px 5px 5px;
+}
+
+.card img {
+  height: auto;
+  border: 2px solid #666769;
+}
+
+/* CSS for the container inside the column */
+.container1 {
+  padding: 5px 5px 5px 5px;
+}
+
+.container1 h2 {
+  text-align: center;
+  font-size: 30px;
+}
+
+.container1 p {
+  padding: 10px 10px 10px 10px;
+  font-weight: 500;
+}
+
+.title {
+  color: red;
+  text-align: center;
+  font-size: 20px;
+}
+
+/* CSS for the button */
+.button {
+  border: none;
+  outline: 0;
+  display: inline-block;
+  padding: 8px;
+  color: white;
+  background-color: #000;
+  text-align: center;
+  cursor: pointer;
+  width: 100%;
+}
+
+.button:hover {
+  background-color: #555;
+}
+
+/* CSS for the footer */
+.footer {
+  position: relative;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  background-color: #666769;
+  color: white;
+  text-align: center;
+  @media only screen and (max-width: 700px) {
+    position: static; 
+  }
+}
